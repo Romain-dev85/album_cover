@@ -1,21 +1,13 @@
-create table user (
-  id int unsigned primary key auto_increment not null,
-  email varchar(255) not null unique,
-  password varchar(255) not null
+create table album_cover (
+  id int primary key auto_increment not null,
+  artist_name varchar(255) not null,
+  album_name varchar(255) not null,
+  cover_url text not null
 );
 
-create table item (
-  id int unsigned primary key auto_increment not null,
-  title varchar(255) not null,
-  user_id int unsigned not null,
-  foreign key(user_id) references user(id)
-);
+INSERT INTO album_cover (artist_name, album_name, cover_url)
+VALUES 
+('Nirvana', 'Nevermind', 'https://media.senscritique.com/media/000008554716/0/nevermind.jpg'),
+('PinkFloyd', 'The Dark Side of the Moon', 'https://media.senscritique.com/media/000004795486/0/the_dark_side_of_the_moon.jpg'),
+('The Beatles', 'Abbey Road', 'https://media.senscritique.com/media/000008554716/0/nevermind.jpg');
 
-insert into user(id, email, password)
-values
-  (1, "jdoe@mail.com", "123456");
-
-insert into item(id, title, user_id)
-values
-  (1, "Stuff", 1),
-  (2, "Doodads", 1);
