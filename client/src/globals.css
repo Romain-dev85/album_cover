@@ -33,6 +33,6 @@ main {
   min-height: 100vh;
 
   @media screen and (min-width: 768px) {
-    min-height: calc(100vh - 18.4px - 34px);
+    min-height: calc(100vh - 38.4px - 34px);
   }
 }

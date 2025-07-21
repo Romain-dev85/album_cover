@@ -7,4 +7,14 @@ const browse: RequestHandler = async (req, res) => {
   res.status(200).json(result);
 };
 
-export default { browse };
+const read: RequestHandler = async (req, res) => {
+  const result = await albumCoverRepository.readById(req.params.id);
+
+  if (result) {
+    res.json(result);
+  } else {
+    res.status(404).json("This album doesn't exist");
+  }
+};
+
+export default { browse, read };
