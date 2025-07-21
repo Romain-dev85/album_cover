@@ -1,4 +1,8 @@
-import databaseClient, { type Rows } from "../../../database/client";
+import databaseClient, {
+  type Rows,
+  type Result,
+} from "../../../database/client";
+import type { AlbumCover } from "../../types/express/albumCover";
 
 class AlbumCoverRepository {
   async readAll() {
@@ -14,6 +18,16 @@ class AlbumCoverRepository {
     );
 
     return rows[0];
+  }
+
+  async update(album_cover: AlbumCover) {
+    const { id, artist_name, album_name, cover_url } = album_cover;
+
+    const [result] = await databaseClient.query<Result>(
+      "UPDATE album_cover SET artist_name = ?, album_name = ?, cover_url = ? WHERE id = ?",
+      [artist_name, album_name, cover_url, id],
+    );
+    return result.affectedRows;
   }
 }
 
