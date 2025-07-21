@@ -1,0 +1,4 @@
+.header-container {
+  background-color: var(--bcg-main);
+  font-family: var(--font-family-body);
+}

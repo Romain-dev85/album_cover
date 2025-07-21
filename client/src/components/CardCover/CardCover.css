@@ -1,0 +1,20 @@
+.card-cover-container {
+  height: 400px;
+  margin: 0;
+
+  img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  figcaption {
+    background-color: var(--bcg-card);
+    color: var(--font-color);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 16px 0;
+    border-radius: 0 0 24px 24px;
+  }
+}

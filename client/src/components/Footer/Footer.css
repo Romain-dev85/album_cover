@@ -1,0 +1,7 @@
+.footer-container {
+  text-align: end;
+  img {
+    margin-right: 8px;
+    height: 30px;
+  }
+}
