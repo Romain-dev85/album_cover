@@ -6,9 +6,13 @@ Ce dépôt contient un mini-projet permettant d'utiliser un CRUD (Create, Read, 
 L'objectif est de créer un site où il est possible d'afficher des pochettes d'album stockées dans une base de données, et d'ajouter, modifier ou supprimer ces pochettes facilement via une interface web.
 
 Fonctionnalités
+
 -Affichage des pochettes d'albums depuis la base de données
+
 -Ajout d’une nouvelle pochette avec ses informations
+
 -Modification des pochettes existantes
+
 -Suppression des pochettes indésirables
 
 <img width="1898" height="935" alt="Capture d'écran 2025-07-22 193319" src="https://github.com/user-attachments/assets/f53b36d6-81e2-4a85-ba12-14df4c64204f" />
