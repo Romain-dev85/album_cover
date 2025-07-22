@@ -29,6 +29,26 @@ class AlbumCoverRepository {
     );
     return result.affectedRows;
   }
+
+  async create(album_cover: AlbumCover) {
+    const { id, artist_name, album_name, cover_url } = album_cover;
+
+    const [result] = await databaseClient.query<Result>(
+      "INSERT INTO album_cover (artist_name, album_name, cover_url) VALUES(?, ?, ?)",
+      [artist_name, album_name, cover_url, id],
+    );
+
+    return result.insertId;
+  }
+
+  async delete(id: string) {
+    const [result] = await databaseClient.query<Result>(
+      "DELETE FROM album_cover WHERE id = ?",
+      [id],
+    );
+
+    return result.affectedRows;
+  }
 }
 
 export default new AlbumCoverRepository();
