@@ -100,9 +100,12 @@ const DetailPage = () => {
 
               <div>
                 <button type="button" onClick={handleDelete}>
-                  Supprimer
+                  Remove <br /> cover
                 </button>
-                <button type="submit">Modifier</button>
+                <button type="submit">
+                  Validate <br />
+                  modification
+                </button>
               </div>
             </form>
           </article>

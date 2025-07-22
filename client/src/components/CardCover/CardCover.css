@@ -8,11 +8,18 @@
   }
 
   figcaption {
+    width: 100%;
     background-color: var(--bcg-card);
     color: var(--font-color);
     text-align: center;
     font-size: 1.5rem;
     padding: 16px 0;
     border-radius: 0 0 24px 24px;
+  }
+}
+
+.card-cover-container {
+  @media screen and (max-width: 768px) {
+    height: 300px;
   }
 }

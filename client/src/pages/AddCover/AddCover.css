@@ -5,4 +5,26 @@
     align-items: center;
     justify-content: center;
   }
+
+  input,
+  label {
+    color: white;
+    width: 300px;
+    font-size: 1.1rem;
+    margin: 8px 0;
+  }
+
+  input {
+    border: none;
+    border-radius: 4px;
+  }
+
+  button {
+    width: 25%;
+    margin: 8px 0 0 auto;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+  }
 }

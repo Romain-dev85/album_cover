@@ -1,6 +1,7 @@
 .home-container {
   h1 {
     text-align: center;
+    font-size: 2rem;
   }
 
   article {
@@ -13,8 +14,20 @@
 
   figcaption {
     height: 113px;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  figure:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+}
+
+.home-container figcaption {
+  @media screen and (max-width: 768px) {
+    width: 300px;
   }
 }
