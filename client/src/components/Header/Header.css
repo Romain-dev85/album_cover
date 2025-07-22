@@ -1,4 +1,6 @@
 .header-container {
   background-color: var(--bcg-main);
   font-family: var(--font-family-body);
+  display: flex;
+  justify-content: space-between;
 }
