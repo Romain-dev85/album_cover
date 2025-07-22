@@ -19,7 +19,7 @@ const Home = () => {
       </div>
       <article>
         {covers.map((cover) => (
-          <Link to="/" key={cover.id}>
+          <Link to={`/detail-page/${cover.id}`} key={cover.id}>
             <CardCover
               coverUrl={cover.cover_url}
               artistName={cover.artist_name}

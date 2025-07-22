@@ -4,10 +4,17 @@
   }
 
   article {
-    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 32px;
+  }
+
+  figcaption {
+    height: 113px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
