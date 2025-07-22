@@ -3,7 +3,6 @@ Mini-projet CRUD - Gestion de pochettes d'albums
 
 Ce dépôt contient un mini-projet permettant d'utiliser un CRUD (Create, Read, Update, Delete) via un site web pour gérer des pochettes d'albums.
 
-Objectif
 L'objectif est de créer un site où il est possible d'afficher des pochettes d'album stockées dans une base de données, et d'ajouter, modifier ou supprimer ces pochettes facilement via une interface web.
 
 Fonctionnalités
