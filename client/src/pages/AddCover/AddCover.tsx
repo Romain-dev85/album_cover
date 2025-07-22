@@ -14,7 +14,7 @@ const AddCover = () => {
   };
 
   return (
-    <section>
+    <section className="add-cover-container">
       <h1>Add album art</h1>
       <form action={handleSubmit}>
         <label htmlFor="artist_name">Name of the artist</label>

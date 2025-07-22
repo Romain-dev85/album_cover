@@ -1,0 +1,8 @@
+.add-cover-container {
+  text-align: center;
+  form {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+}

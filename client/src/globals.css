@@ -30,8 +30,6 @@ ul {
 }
 
 main {
-  min-height: 100vh;
-
   @media screen and (min-width: 768px) {
     min-height: calc(100vh - 18px - 34px);
   }

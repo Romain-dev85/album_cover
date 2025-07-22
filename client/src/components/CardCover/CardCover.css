@@ -1,10 +1,8 @@
 .card-cover-container {
   height: 400px;
-  margin: 0;
 
   img {
     height: 100%;
-    width: 100%;
     display: block;
     object-fit: cover;
   }

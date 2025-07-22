@@ -1,9 +1,43 @@
 .detail-page-container {
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+  }
+
   h1 {
-    text-align: end;
+    text-align: center;
   }
   article:first-of-type img,
   figcaption {
     width: 400px;
+  }
+
+  article form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  input,
+  label {
+    color: white;
+    width: 300px;
+    font-size: 1.1rem;
+    margin: 8px 0;
+  }
+
+  input {
+    color: black;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    padding: 8px 16px;
+    cursor: pointer;
   }
 }

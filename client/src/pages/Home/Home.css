@@ -5,10 +5,10 @@
 
   article {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 120px 0;
   }
 
   figcaption {
