@@ -1,5 +1,6 @@
 # album_cover
 Mini-projet CRUD - Gestion de pochettes d'albums
+
 Ce dépôt contient un mini-projet permettant d'utiliser un CRUD (Create, Read, Update, Delete) via un site web pour gérer des pochettes d'albums.
 
 Objectif
