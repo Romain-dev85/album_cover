@@ -15,7 +15,9 @@ Fonctionnalités
 
 -Suppression des pochettes indésirables
 
-<img width="1898" height="935" alt="Capture d'écran 2025-07-22 193319" src="https://github.com/user-attachments/assets/f53b36d6-81e2-4a85-ba12-14df4c64204f" />
+-Filtrer pochettes par nom d'artiste ou d'album 
+
+<img width="1885" height="850" alt="Capture d'écran 2025-07-23 165338" src="https://github.com/user-attachments/assets/905beb53-842b-4f08-9547-f07a5ae8a638" />
 <img width="1906" height="939" alt="Capture d'écran 2025-07-22 193357" src="https://github.com/user-attachments/assets/3b44e6d6-0e39-4ca5-b3f4-6969dd52a637" />
 
 
