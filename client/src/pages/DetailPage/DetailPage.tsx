@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router";
 import "./DetailPage.css";
 import { useEffect, useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
+import { toast } from "react-toastify";
 import CardCover from "../../components/CardCover/CardCover";
 
 const DetailPage = () => {
@@ -26,17 +27,16 @@ const DetailPage = () => {
   };
 
   const handleDelete = () => {
-    if (!window.confirm("Voulez-vous vraiment supprimer cette pochette ?"))
-      return;
+    if (!window.confirm("Do you really want to delete this cover ?")) return;
 
     fetch(`http://localhost:3310/api/album-cover/${id}`, {
       method: "DELETE",
     }).then((response) => {
       if (response.ok) {
-        alert("Pochette supprimée !");
+        toast("Cover removed !");
         navigate("/");
       } else {
-        alert("Erreur lors de la suppression.");
+        toast("Error while deleting.");
       }
     });
   };
@@ -49,69 +49,72 @@ const DetailPage = () => {
       body: JSON.stringify(cover),
     }).then((response) => {
       if (response.ok) {
-        alert("Modification réussie !");
+        toast("Modification successful !");
         navigate("/");
       } else {
-        alert("Erreur lors de la modification.");
+        toast("Error while editing.");
       }
     });
   };
 
-  if (cover)
-    return (
-      <div className="detail-page-container">
-        <h1>Edit or delete album art</h1>
-        <section>
-          <article>
-            <CardCover
-              coverUrl={cover.cover_url}
-              artistName={cover.artist_name}
-              albumName={cover.album_name}
+  if (!cover) {
+    return <h1>Loading...</h1>;
+  }
+
+  return (
+    <div className="detail-page-container">
+      <h1>Edit or delete album art</h1>
+      <section>
+        <article>
+          <CardCover
+            coverUrl={cover.cover_url}
+            artistName={cover.artist_name}
+            albumName={cover.album_name}
+          />
+        </article>
+        <article>
+          <form onSubmit={handleUpdate}>
+            <label htmlFor="artist_name">Name of the artist</label>
+            <input
+              id="artist_name"
+              name="artist_name"
+              value={cover.artist_name}
+              onChange={handleChange}
+              placeholder="Exemple: Nirvana"
             />
-          </article>
-          <article>
-            <form onSubmit={handleUpdate}>
-              <label htmlFor="artist_name">Name of the artist</label>
-              <input
-                id="artist_name"
-                name="artist_name"
-                value={cover.artist_name}
-                onChange={handleChange}
-                placeholder="Exemple: Nirvana"
-              />
 
-              <label htmlFor="album_name">Name of the album</label>
-              <input
-                id="album_name"
-                name="album_name"
-                value={cover.album_name}
-                onChange={handleChange}
-                placeholder="Exemple: Nevermind"
-              />
+            <label htmlFor="album_name">Name of the album</label>
+            <input
+              id="album_name"
+              name="album_name"
+              value={cover.album_name}
+              onChange={handleChange}
+              placeholder="Exemple: Nevermind"
+            />
 
-              <label htmlFor="cover_url">Image of the album</label>
-              <input
-                id="cover_url"
-                name="cover_url"
-                value={cover.cover_url}
-                onChange={handleChange}
-                placeholder="Exemple: nevermind_image.png"
-              />
+            <label htmlFor="cover_url">Image of the album</label>
+            <input
+              id="cover_url"
+              name="cover_url"
+              value={cover.cover_url}
+              onChange={handleChange}
+              placeholder="Exemple: nevermind_image.png"
+            />
 
-              <div>
-                <button type="button" onClick={handleDelete}>
-                  Remove <br /> cover
-                </button>
-                <button type="submit">
-                  Validate <br />
-                  modification
-                </button>
-              </div>
-            </form>
-          </article>
-        </section>
-      </div>
-    );
+            <div>
+              <button type="button" onClick={handleDelete}>
+                Remove <br /> cover
+              </button>
+              <button type="submit">
+                Validate <br />
+                modification
+              </button>
+            </div>
+          </form>
+        </article>
+      </section>
+    </div>
+  );
 };
 
 export default DetailPage;

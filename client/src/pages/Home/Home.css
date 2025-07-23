@@ -1,7 +1,16 @@
 .home-container {
-  h1 {
+  div:first-of-type {
     text-align: center;
-    font-size: 2rem;
+    margin: 24px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    input {
+      /* height: 32px; */
+      font-size: 1.5rem;
+    }
   }
 
   article {

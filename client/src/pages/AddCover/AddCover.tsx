@@ -1,6 +1,10 @@
+import { toast } from "react-toastify";
 import "./AddCover.css";
+import { useNavigate } from "react-router";
 
 const AddCover = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (data: FormData) => {
     const formData = JSON.stringify(Object.fromEntries(data));
 
@@ -10,7 +14,14 @@ const AddCover = () => {
         "Content-Type": "application/json",
       },
       body: formData,
-    }).then((res) => res.ok);
+    }).then((res) => {
+      if (res.ok) {
+        toast("Cover successfully added !");
+        navigate("/");
+      } else {
+        toast("Error adding cover.");
+      }
+    });
   };
 
   return (

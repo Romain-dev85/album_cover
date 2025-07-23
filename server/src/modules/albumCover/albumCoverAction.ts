@@ -2,9 +2,13 @@ import type { RequestHandler } from "express";
 import albumCoverRepository from "./albumCoverRepository";
 
 const browse: RequestHandler = async (req, res) => {
-  const result = await albumCoverRepository.readAll();
+  try {
+    const result = await albumCoverRepository.readAll();
 
-  res.status(200).json(result);
+    res.status(200).json(result);
+  } catch (err) {
+    res.sendStatus(500);
+  }
 };
 
 const read: RequestHandler = async (req, res) => {
@@ -14,7 +18,7 @@ const read: RequestHandler = async (req, res) => {
     if (result) {
       res.json(result);
     } else {
-      res.sendStatus(404).json("This album doesn't exist");
+      res.status(404).json("This album doesn't exist");
     }
   } catch (err) {
     res.sendStatus(500);
