@@ -106,7 +106,7 @@ const DetailPage = () => {
                 Remove <br /> cover
               </button>
               <button type="submit">
-                Validate <br />
+                Submit <br />
                 modification
               </button>
             </div>

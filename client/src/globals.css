@@ -20,7 +20,7 @@ ul {
 
 @font-face {
   font-family: "poppins";
-  src: url(/client/public/font/Poppins-Regular.ttf);
+  src: url(/font/Poppins-Regular.ttf);
 }
 
 :root {
@@ -32,6 +32,6 @@ ul {
 
 main {
   @media screen and (min-width: 768px) {
-    min-height: calc(100vh - 107px - 34px);
+    min-height: calc(100vh - 225px - 66px);
   }
 }

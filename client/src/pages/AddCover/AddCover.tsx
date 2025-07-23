@@ -46,10 +46,10 @@ const AddCover = () => {
         <input
           id="cover_url"
           name="cover_url"
-          placeholder="Exemple: nervermind_image.png"
+          placeholder="Exemple: https://media.senscritique.com/media/000008554716/0/nevermind.jpg"
         />
 
-        <button type="submit">Valider</button>
+        <button type="submit">Submit</button>
       </form>
     </section>
   );

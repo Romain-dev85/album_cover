@@ -8,15 +8,18 @@
 
   input,
   label {
-    color: black;
-    width: 300px;
+    width: 400px;
     font-size: 1.1rem;
-    margin: 8px 0;
   }
 
   input {
     border: none;
     border-radius: 4px;
+  }
+
+  label {
+    margin-top: 16px;
+    margin-bottom: 4px;
   }
 
   button {
@@ -26,5 +29,14 @@
     cursor: pointer;
     border-radius: 8px;
     border: none;
+  }
+}
+
+.add-cover-container {
+  @media screen and (max-width: 768px) {
+    input,
+    label {
+      width: 300px;
+    }
   }
 }
