@@ -11,7 +11,7 @@ function App() {
       <main>
         <Outlet />
       </main>
-      <ToastContainer position="bottom-right" autoClose={3000} closeOnClick />
+      <ToastContainer position="top-center" autoClose={3000} closeOnClick />
       <Footer />
     </>
   );
